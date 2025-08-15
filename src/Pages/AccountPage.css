@@ -1,0 +1,276 @@
+.account-page {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.account-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-card {
+  margin-top: 80px;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.profile-picture-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.profile-picture-wrapper:hover .profile-picture {
+  opacity: 0.7;
+}
+
+.profile-picture-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-picture-wrapper:hover .profile-picture-overlay {
+  opacity: 1;
+}
+
+.profile-content {
+  flex-grow: 1;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.profile-detail {
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.profile-bio {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3B82F6;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #2563EB;
+}
+
+.btn-success {
+  background-color: #10B981;
+  color: white;
+  border: none;
+  margin-right: 1rem;
+}
+
+.btn-success:hover {
+  background-color: #059669;
+}
+
+.btn-danger {
+  background-color: #EF4444;
+  color: white;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #DC2626;
+}
+
+.edit-actions {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.listings-section {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.listings-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.no-listings {
+  color: #666;
+  text-align: center;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.listing-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.listing-card:hover {
+  transform: scale(1.03);
+}
+
+.listing-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.listing-details {
+  padding: 1rem;
+}
+
+.listing-name {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.listing-price {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.btn-remove {
+  width: 100%;
+  background-color: #EF4444;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.btn-remove:hover {
+  background-color: #DC2626;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.modal-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-danger {
+  margin-top: 1rem;
+}
+
+.rating-section {
+  margin-top: 10px;
+}
+.rating-star {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.rated-msg {
+  color: green;
+  font-weight: bold;
+}
+

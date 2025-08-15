@@ -1,0 +1,16 @@
+.content-container {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-container {
+    width: 250px; 
+    padding: 20px;
+    border-right: 1px solid #ccc; 
+}
+
+.posts {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
