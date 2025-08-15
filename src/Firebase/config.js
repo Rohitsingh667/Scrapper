@@ -4,7 +4,7 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA_lg1ARTJkawLyllQwB4wXohnr5e3xdds",
+  apiKey: "process.env.firebaseapikey",
   authDomain: "olx-clone-e1529.firebaseapp.com",
   projectId: "olx-clone-e1529",
   storageBucket: "olx-clone-e1529.appspot.com",
